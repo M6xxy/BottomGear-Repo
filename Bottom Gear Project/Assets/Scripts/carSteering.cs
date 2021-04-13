@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class carSteering : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float speed;
+    Vector3 oldPosition;
     void Start()
     {
         
     }
+    public float maxSpeed = 1.0f;
+    void FixedUpdate()
+    {
+        speed = Vector3.Distance(oldPosition, transform.position) * 100f;
+        oldPosition = transform.position;
+        Debug.Log("Speed: " + speed.ToString("F2"));
+    }
 
-    // Update is called once per frame
+    // Main movement loop
     void Update()     
     {
        
         //Load rigidbody2d as rb
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        // Check for and set max speed
+       if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
 
         var carVelocity = rb.velocity;
-        print(carVelocity);
         // Condition: when player presses D add force
         if (Input.GetKey(KeyCode.D) == true)
         {
@@ -27,7 +39,6 @@ public class carSteering : MonoBehaviour
 
             // Add a force to the rigid body to move player
             rb.AddForce(Vector2.right * 10f);
-            transform.Rotate(Vector3.back * 1.1f );
         }
 
         // Condition: when player presses A add force
@@ -38,7 +49,6 @@ public class carSteering : MonoBehaviour
 
             // Add a force to the rigid body to move player
             rb.AddForce(Vector2.left * 10f);
-            transform.Rotate(Vector3.forward * 1.1f );
 
         }
 
