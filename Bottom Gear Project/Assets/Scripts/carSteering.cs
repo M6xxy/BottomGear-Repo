@@ -11,12 +11,6 @@ public class carSteering : MonoBehaviour
         
     }
     public float maxSpeed = 1.0f;
-    void FixedUpdate()
-    {
-        speed = Vector3.Distance(oldPosition, transform.position) * 100f;
-        oldPosition = transform.position;
-        Debug.Log("Speed: " + speed.ToString("F2"));
-    }
 
     // Main movement loop
     void Update()     
