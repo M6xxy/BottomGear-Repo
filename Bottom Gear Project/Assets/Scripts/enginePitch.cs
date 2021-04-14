@@ -37,22 +37,22 @@ public class enginePitch : MonoBehaviour
 
         }
 
-        if (rb.velocity.magnitude > 1.5 && rb.velocity.magnitude <= 3)
+        if (rb.velocity.magnitude > 1.5 && rb.velocity.magnitude <= 2)
         {
             audioSource.pitch = gear2;
 
         }
-        if (rb.velocity.magnitude > 3 && rb.velocity.magnitude <= 6)
+        if (rb.velocity.magnitude > 2 && rb.velocity.magnitude <= 2.5)
         {
             audioSource.pitch = gear3;
 
         }
-        if (rb.velocity.magnitude > 6 && rb.velocity.magnitude <= 8)
+        if (rb.velocity.magnitude > 2.5 && rb.velocity.magnitude <= 3)
         {
             audioSource.pitch = gear4;
 
         }
-        if (rb.velocity.magnitude > 8 && rb.velocity.magnitude <= 10)
+        if (rb.velocity.magnitude > 3 && rb.velocity.magnitude <= 5)
         {
             audioSource.pitch = gear5;
 
