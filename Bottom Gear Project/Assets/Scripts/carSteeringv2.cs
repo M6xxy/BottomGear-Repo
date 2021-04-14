@@ -25,10 +25,25 @@ public class carSteeringv2 : MonoBehaviour
         if (Input.GetKey(KeyCode.S) == true)
         {
 
-            rb.AddForce(transform.up * -speedForce);
+            rb.AddForce(transform.up * -speedForce / 3.33f);
+            torqueForce = 1f;
 
         }
+        else torqueForce = 1.5f;
 
-        rb.AddTorque(Input.GetAxis("Horizontal") * torqueForce * Time.deltaTime, ForceMode2D.Impulse);
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.AddTorque(torqueForce * Time.deltaTime, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.AddTorque(-torqueForce * Time.deltaTime, ForceMode2D.Impulse);
+        }
+
+        // While player holds S half turnrate
+        
+        else torqueForce = 1.5f;
+        //  rb.AddTorque(Input.GetAxis("Horizontal") * torqueForce * Time.deltaTime, ForceMode2D.Impulse);
     }
 }
