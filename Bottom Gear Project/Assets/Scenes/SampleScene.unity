@@ -464,10 +464,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 8039042307582564905, guid: 473d09b4094e57e4bb629d3c3d06babb,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039042307582564905, guid: 473d09b4094e57e4bb629d3c3d06babb,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8039042307582564908, guid: 473d09b4094e57e4bb629d3c3d06babb,
         type: 3}
       propertyPath: m_Name
       value: playerCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039042307582564911, guid: 473d09b4094e57e4bb629d3c3d06babb,
+        type: 3}
+      propertyPath: torqueForce
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 473d09b4094e57e4bb629d3c3d06babb, type: 3}
