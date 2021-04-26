@@ -79,8 +79,6 @@ public class carSteeringv2 : MonoBehaviour
         {
             // UPDATE UI TEXT
             lapCounterUI.text = "LAP " + totalLaps.ToString() + "/" + maxLaps.ToString();
-            // PAUSE GAME
-            Time.timeScale = 0;
             // TURN ON WIN UI
             winScreenUI.text = "YOU FINISHED THE RACE";
             // TURN OFF CAR VOLUME
