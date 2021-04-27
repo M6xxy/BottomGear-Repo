@@ -7,10 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused;
+    AudioSource audioSource2;
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
+        audioSource2 = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,10 +23,12 @@ public class PauseMenu : MonoBehaviour
             if (isPaused)
             {
                 ResumeGame();
+                audioSource2.volume = 0.2f;
             }
             else
             {
                 PauseGame();
+                audioSource2.volume = 0f;
             }
         }
     }

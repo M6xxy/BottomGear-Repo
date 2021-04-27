@@ -493,7 +493,7 @@ MonoBehaviour:
   m_text: RETURN TO MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -649,10 +649,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.59460664, g: 0.9622642, b: 0.9146539, a: 1}
-    m_HighlightedColor: {r: 0.22347811, g: 0.5849056, b: 0.5816032, a: 1}
-    m_PressedColor: {r: 0.22352943, g: 0.58431375, b: 0.5803922, a: 1}
-    m_SelectedColor: {r: 0.22352943, g: 0.58431375, b: 0.5803922, a: 1}
+    m_NormalColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+    m_HighlightedColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

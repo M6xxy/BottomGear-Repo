@@ -26,25 +26,27 @@ public class enginePitchv2: MonoBehaviour
         // LOAD RIGIBODY 2D
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         carVelocityMagnitude = rb.velocity.magnitude;
-        //set pitch varible 
+        //if game is paused dont run code below
 
-        // STOP TO LOW RPM SOUND WHILE MAGNITUDE < 8
-        if (carVelocityMagnitude >= 0 && carVelocityMagnitude <= 8)
-        {
-            audioSource2.pitch = carVelocityMagnitude  / 2.6f;
-
-        }
-        // HIGHER RPM SOUND IF MAGNITUDE > 8
-        if (carVelocityMagnitude > 8 && carVelocityMagnitude <= 15)
-        {
-            // STOP CALCULATION IF PITCH > 2.9
-            // FANCY WAY OF SAYING MAX PITCH
-            if (audioSource2.pitch < 2.9) 
+            // STOP TO LOW RPM SOUND WHILE MAGNITUDE < 8
+            if (carVelocityMagnitude >= 0 && carVelocityMagnitude <= 8)
             {
-                audioSource2.pitch = carVelocityMagnitude / 4f;
+                audioSource2.pitch = carVelocityMagnitude / 2.6f;
+
+            }
+            // HIGHER RPM SOUND IF MAGNITUDE > 8
+            if (carVelocityMagnitude > 8 && carVelocityMagnitude <= 15)
+            {
+                // STOP CALCULATION IF PITCH > 2.9
+                // FANCY WAY OF SAYING MAX PITCH
+                if (audioSource2.pitch < 2.9)
+                {
+                    audioSource2.pitch = carVelocityMagnitude / 4f;
+                }
+
             }
 
-        }
+
         
 
 
