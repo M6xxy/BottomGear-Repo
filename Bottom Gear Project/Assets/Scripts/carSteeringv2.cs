@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class carSteeringv2 : MonoBehaviour
 {
@@ -79,14 +80,14 @@ public class carSteeringv2 : MonoBehaviour
         {
             // UPDATE UI TEXT
             lapCounterUI.text = "LAP " + totalLaps.ToString() + "/" + maxLaps.ToString();
-            // TURN ON WIN UI
-            winScreenUI.text = "YOU FINISHED THE RACE";
             // TURN OFF CAR VOLUME
             audioSource2.volume = 0f;
             // Pause Game
             Time.timeScale = 0f;
             // Set Race won as true for pause menu fix
             raceWon = true;
+            // load win screen scene
+            SceneManager.LoadScene("Win Menu");
 
         }
     }
