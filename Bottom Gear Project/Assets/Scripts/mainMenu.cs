@@ -14,4 +14,15 @@ public class mainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void MonzaLoad()
+    {
+        SceneManager.LoadScene("MONZA LEVEL");
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+        Time.timeScale = 1f;
+        carSteeringv2.raceWon = false;
+    }
 }

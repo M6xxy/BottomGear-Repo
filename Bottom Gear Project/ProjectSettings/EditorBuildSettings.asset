@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SPA LEVEL.unity
     guid: 08852d679e8539249ad8b6c842103021
+  - enabled: 1
+    path: Assets/Scenes/Win Menu.unity
+    guid: ccf53256b41986047938b5186e8343f1
   m_configObjects: {}
