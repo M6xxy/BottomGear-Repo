@@ -15,21 +15,21 @@ public class carSteeringv2 : MonoBehaviour
     public Text winScreenUI;
     public float totalTime;
     public float timeFinished;
+    public static bool raceWon;
 
 
 
     void Start()
     {
         audioSource2 = GetComponent<AudioSource>();
-        lapCounterUI.text = "LAP: " + totalLaps.ToString() + "/" + maxLaps.ToString();
-        timeCounterUI.text = "TOTAL TIME: " + Time.time.ToString() ;
+        lapCounterUI.text = "LAP " + totalLaps.ToString() + "/" + maxLaps.ToString();
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         // Update UI Time Counter
-        totalTime = Time.time;
-        timeCounterUI.text = "TOTAL TIME: " + totalTime.ToString();
+        totalTime = Time.timeSinceLevelLoad;
+        timeCounterUI.text = "TOTAL TIME: " + totalTime.ToString("F");
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
         // when player holds W give positive speed * speed multiplier 
@@ -83,6 +83,10 @@ public class carSteeringv2 : MonoBehaviour
             winScreenUI.text = "YOU FINISHED THE RACE";
             // TURN OFF CAR VOLUME
             audioSource2.volume = 0f;
+            // Pause Game
+            Time.timeScale = 0f;
+            // Set Race won as true for pause menu fix
+            raceWon = true;
 
         }
     }

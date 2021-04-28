@@ -1389,7 +1389,7 @@ PrefabInstance:
     - target: {fileID: 8039042307582564911, guid: 473d09b4094e57e4bb629d3c3d06babb,
         type: 3}
       propertyPath: maxLaps
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8039042307582564911, guid: 473d09b4094e57e4bb629d3c3d06babb,
         type: 3}

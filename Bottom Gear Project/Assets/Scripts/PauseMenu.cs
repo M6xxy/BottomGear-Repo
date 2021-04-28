@@ -17,19 +17,28 @@ public class PauseMenu : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
+    {   
+        // if race isnt over allow pause menu
+        if (carSteeringv2.raceWon == false)
         {
-            if (isPaused)
+            if (Input.GetKeyDown(KeyCode.F1))
             {
-                ResumeGame();
-                audioSource2.volume = 0.2f;
+                if (isPaused)
+                {
+                    ResumeGame();
+                    audioSource2.volume = 0.2f;
+                }
+                else
+                {
+                    PauseGame();
+                    audioSource2.volume = 0f;
+
+                }
             }
-            else
-            {
-                PauseGame();
-                audioSource2.volume = 0f;
-            }
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
         }
     }
     public void PauseGame()
@@ -49,5 +58,6 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
+        carSteeringv2.raceWon = false;
     }
 }
