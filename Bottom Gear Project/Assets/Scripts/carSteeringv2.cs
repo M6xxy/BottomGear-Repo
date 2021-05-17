@@ -83,12 +83,11 @@ public class carSteeringv2 : MonoBehaviour
             lapCounterUI.text = "LAP " + totalLaps.ToString() + "/" + maxLaps.ToString();
             // TURN OFF CAR VOLUME
             audioSource2.volume = 0f;
-            // Pause Game
-            Time.timeScale = 0f;
             // Set Race won as true for pause menu fix
             raceWon = true;
             // load win screen scene
-            SceneManager.LoadScene("Win Menu");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            PauseMenu.isPaused = false;
 
         }
         

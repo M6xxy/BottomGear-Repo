@@ -9,11 +9,12 @@ public class PauseMenu : MonoBehaviour
     public static bool isPaused;
     AudioSource audioSource2;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         pauseMenu.SetActive(false);
-        audioSource2 = GetComponent<AudioSource>();
         Time.timeScale = 1f;
+        audioSource2 = GetComponent<AudioSource>();
+        carSteeringv2.raceWon = false;
     }
 
     // Update is called once per frame
@@ -59,6 +60,5 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
-        carSteeringv2.raceWon = false;
     }
 }
