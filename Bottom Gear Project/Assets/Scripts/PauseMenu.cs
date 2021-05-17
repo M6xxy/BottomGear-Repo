@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         audioSource2 = GetComponent<AudioSource>();
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame

@@ -69,6 +69,7 @@ public class carSteeringv2 : MonoBehaviour
     void OnTriggerExit2D(Collider2D collider)
     {
         totalLaps = totalLaps + 1;
+
         if (totalLaps < maxLaps)
         {
             lapCounterUI.text = "LAP " + totalLaps.ToString() + "/" + maxLaps.ToString();
@@ -90,5 +91,6 @@ public class carSteeringv2 : MonoBehaviour
             SceneManager.LoadScene("Win Menu");
 
         }
+        
     }
 }
